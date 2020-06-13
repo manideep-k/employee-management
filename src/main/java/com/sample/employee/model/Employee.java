@@ -10,7 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "employee")
@@ -35,6 +35,7 @@ public class Employee {
     private String address;
 
     @Column(nullable = false)
+    @Convert(converter = EmployeeAttributeConverter.class)
     private EmployeeRole role;
 
     @JsonIgnore
@@ -43,13 +44,17 @@ public class Employee {
     @JsonIgnore
     private String password;
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @Column(columnDefinition="DATETIME(3)")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss.SSS")
     @CreationTimestamp
-    private LocalDateTime created_at;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date created_at;
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @Column(columnDefinition="DATETIME(3)")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss.SSS")
     @UpdateTimestamp
-    private LocalDateTime updated_at;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updated_at;
 
 }
 
