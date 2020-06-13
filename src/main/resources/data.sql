@@ -1,0 +1,1 @@
+insert into employee(id,address,age) values(2, "asd", 2);
