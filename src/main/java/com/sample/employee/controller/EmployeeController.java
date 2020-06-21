@@ -17,7 +17,7 @@ public class EmployeeController implements EmployeeService {
     EmployeeDao employeeDao;
 
     @GetMapping("/login")
-    public String getLoginId() {
+    public String getLoginId(@RequestParam String userName, @RequestParam String password) {
         return "Temp#Id";
     }
 
