@@ -3,7 +3,8 @@
 # Pre-requisites
 * Database: MySQL
 * Schema: first_go
-* Please note you can use your separate schema here. You can change it in this [file](https://github.com/cb-manideep/employee-management/blob/master/src/main/resources/application.properties)
+* Please note you can use your separate name here. You will have to create that schema in MySQL manually. You can change it in this [file](https://github.com/cb-manideep/employee-management/blob/master/src/main/resources/application.properties)
+* Follow the same for database username and password
 * IDE: IntelliJ Idea
 
 
