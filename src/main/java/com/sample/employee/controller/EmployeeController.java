@@ -16,6 +16,11 @@ public class EmployeeController implements EmployeeService {
     @Autowired
     EmployeeDao employeeDao;
 
+    @GetMapping("/login")
+    public String getLoginId() {
+        return "Temp#Id";
+    }
+
     @GetMapping("/employees")
     public List<Employee> getAllEmployeeDetails() {
         return employeeDao.getAllEmployeeDetails();
