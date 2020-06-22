@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/employee-management", produces = { MediaType.APPLICATION_JSON_VALUE })
+@CrossOrigin(origins = "http://localhost:3000")
 public class EmployeeController implements EmployeeService {
 
     @Autowired
