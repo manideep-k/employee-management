@@ -15,12 +15,7 @@ import java.util.List;
 public class EmployeeController implements EmployeeService {
 
     @Autowired
-    EmployeeDao employeeDao;
-
-    @GetMapping("/login")
-    public String getLoginId(@RequestParam String userName, @RequestParam String password) {
-        return "Temp#Id";
-    }
+    private EmployeeDao employeeDao;
 
     @GetMapping("/employees")
     public List<Employee> getAllEmployeeDetails() {

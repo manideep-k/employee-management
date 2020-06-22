@@ -4,12 +4,12 @@ import com.sample.employee.model.Employee;
 import com.sample.employee.respository.EmployeeRepository;
 import com.sample.employee.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class EmployeeDao implements EmployeeService {
 
     @Autowired
